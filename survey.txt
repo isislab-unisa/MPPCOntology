@@ -1,0 +1,6 @@
+This survey is designed to capture the opinion of any user that came across the definition of the MPPCOntology together with its notes and the discussions on the various factors that led to its realization.
+It is structured following the sub-ontologies subdivision, and for each sub-ontology it focuses on the fulfillment of the Screenia requirements relative to that partition of the scheme,
+the loyalty toward the eventual ontologies which it reuses and on the general strengths and weaknesses that characterize it (strenghts and weaknesses are freely expressed by the user as personal opinion in the form of free text).
+The judjements corresponding to each response to the survey will be then taken into account depending on the experience and general knowledge of the user on the domain and ontologies used by MPPCOntology.
+
+Link: https://docs.google.com/forms/d/e/1FAIpQLSfIjnGCrtwYcNudugTUzbCr0XaIAC802LF33498vC9eV3e3Ug/viewform
