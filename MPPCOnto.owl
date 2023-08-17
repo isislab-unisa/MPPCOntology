@@ -1,0 +1,1976 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto/"
+     xml:base="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/co/firstItem -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/co/firstItem">
+        <rdfs:domain rdf:resource="http://purl.org/co/List"/>
+        <rdfs:range rdf:resource="http://purl.org/co/ListItem"/>
+        <rdfs:comment>The link to the first item of the list</rdfs:comment>
+        <rdfs:label>first item</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/co/itemContent -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/co/itemContent">
+        <rdfs:domain rdf:resource="http://purl.org/co/ListItem"/>
+        <rdfs:comment>The content of an item of a list</rdfs:comment>
+        <rdfs:label>item content</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/co/nextItem -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/co/nextItem">
+        <rdfs:domain rdf:resource="http://purl.org/co/ListItem"/>
+        <rdfs:range rdf:resource="http://purl.org/co/ListItem"/>
+        <rdfs:comment>The link to the next item in a list</rdfs:comment>
+        <rdfs:label>next item</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#creator -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#creator"/>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#embodiment -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#embodiment">
+        <rdfs:domain rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+        <rdfs:range rdf:resource="http://purl.org/vocab/frbr/core#Manifestation"/>
+        <rdfs:comment>An expression embodied in a manifestation</rdfs:comment>
+        <rdfs:label>embodiment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#exemplar -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#exemplar">
+        <rdfs:domain rdf:resource="http://purl.org/vocab/frbr/core#Manifestation"/>
+        <rdfs:range rdf:resource="http://purl.org/vocab/frbr/core#Item"/>
+        <rdfs:comment>A manifestation exemplified in an item</rdfs:comment>
+        <rdfs:label>exemplar</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#realization -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/frbr/core#realization">
+        <rdfs:domain rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
+        <rdfs:range rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+        <rdfs:comment>A work realized through an expression</rdfs:comment>
+        <rdfs:label>realization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P100_was_death_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P100_was_death_of">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E69_Death"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Author"/>
+        <rdfs:comment>This property links an instance of E69 Death to the instance of author that died</rdfs:comment>
+        <rdfs:label>was death of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P106_is_composed_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P106_is_composed_of"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P129_is_about -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P129_is_about"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P160_has_temporal_projection -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P160_has_temporal_projection"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P2_has_type -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P67_refers_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"/>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P98_brought_into_life -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P98_brought_into_life">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E67_Birth"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Author"/>
+        <rdfs:comment>This property links an instance of E67 Birth event to an instance of author</rdfs:comment>
+        <rdfs:label>brought into life</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/hasCreatedRoom -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/hasCreatedRoom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#DiscussionRoom"/>
+        <rdfs:comment>The discussion room created by a particular user of a platform</rdfs:comment>
+        <rdfs:label>has created room</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#OldLinking -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#OldLinking">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#LinkingText"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#OldComment"/>
+        <rdfs:comment>The linkage between a piece of text of a comment an old comment</rdfs:comment>
+        <rdfs:label>old linking</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#assignedAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#assignedAuthor">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#AuthorAssignment"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E67_Birth"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E69_Death"/>
+        <rdfs:comment>The assignment of an event of birth, death or the place in which one of these events happened to an author</rdfs:comment>
+        <rdfs:label>assigned to author</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#assignedEdition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#assignedEdition">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#EditionAssignment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Edition"/>
+        <rdfs:comment>The assignment of a particular edition to an opera</rdfs:comment>
+        <rdfs:label>assigned to edition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#associated_Tag -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#associated_Tag">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#RestrictedTagging"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Tag"/>
+        <rdfs:comment>The specific tag used by an instance of restricted Tagging</rdfs:comment>
+        <rdfs:label>associated Tag</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#bornInPlace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#bornInPlace">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E67_Birth"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+        <rdfs:comment>The place in which an event of birth happened</rdfs:comment>
+        <rdfs:label>born in place</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#bornInTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#bornInTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P160_has_temporal_projection"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E67_Birth"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+        <rdfs:comment>The time span in which an event of birth happened</rdfs:comment>
+        <rdfs:label>born in time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#classifiedByTag -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#classifiedByTag">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#CommentingEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#RestrictedTagging"/>
+        <rdfs:comment>The association of a tag to a Comment</rdfs:comment>
+        <rdfs:label>classified by tag</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#diedInPlace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#diedInPlace">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E69_Death"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+        <rdfs:comment>The place in which an event of death happened</rdfs:comment>
+        <rdfs:label>died in place</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#diedInTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#diedInTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P160_has_temporal_projection"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E69_Death"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+        <rdfs:comment>The time span in which an event of death happened</rdfs:comment>
+        <rdfs:label>died in time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#discussesOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#discussesOn">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P129_is_about"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#DiscussionRoom"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Comment"/>
+        <rdfs:comment>The comment on which a discussion room pays attention</rdfs:comment>
+        <rdfs:label>discusses on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#ending_Paragraph -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#ending_Paragraph">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#CommentingEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Paragraph"/>
+        <rdfs:comment>The last paragraph of a sequence of paragraphs to which a comment refers</rdfs:comment>
+        <rdfs:label>ending Paragraph</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#hasAgent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#hasAgent">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#CommentingEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#User"/>
+        <rdfs:comment>The user that commented a paragraph</rdfs:comment>
+        <rdfs:label>has agent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#hasLinkingComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#hasLinkingComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P106_is_composed_of"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Comment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#LinkingText"/>
+        <rdfs:comment>A particular linkage contained in the text of a comment</rdfs:comment>
+        <rdfs:label>has linking component</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#hasReliability_B -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#hasReliability_B">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E67_Birth"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Reliability"/>
+        <rdfs:comment>The reliability associated with the linkage between an event of birth and the author or authors it refers</rdfs:comment>
+        <rdfs:label>has birth reliability</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#hasRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#hasRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Role"/>
+        <rdfs:comment>The connection between an user of a platform and the role he plays in it</rdfs:comment>
+        <rdfs:label>has role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#has_Meaning -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#has_Meaning">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Tag"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Meaning"/>
+        <rdfs:comment>The particular meaning, considered to be &quot;official&quot;, of a tag</rdfs:comment>
+        <rdfs:label>has meaning</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#has_Reliability_D -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#has_Reliability_D">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E69_Death"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Reliability"/>
+        <rdfs:comment>The reliability associated with the linkage between an event of death and the author or authors it refers</rdfs:comment>
+        <rdfs:label>has death reliability</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#history_log -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#history_log">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#CommentingEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#HistoryLogList"/>
+        <rdfs:comment>the history of changes made to a comment</rdfs:comment>
+        <rdfs:label>history log</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#in_chapter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#in_chapter">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Paragraph"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#ChapterListItem"/>
+        <rdfs:comment>The chapter of a book to which a paragraph belongs</rdfs:comment>
+        <rdfs:label>in chapter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#linkedToComment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#linkedToComment">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#LinkingText"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Comment"/>
+        <rdfs:comment>The linkage between a piece of text of a comment and another comment</rdfs:comment>
+        <rdfs:label>linked to comment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#linked_to_book -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#linked_to_book">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#LinkingText"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Book"/>
+        <rdfs:comment>The linkage between a piece of text of a comment and a book</rdfs:comment>
+        <rdfs:label>linked to book</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#linked_to_chapter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#linked_to_chapter">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#LinkingText"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#ChapterListItem"/>
+        <rdfs:comment>The linkage between a piece of text of a comment and a chapter</rdfs:comment>
+        <rdfs:label>linked to chapter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#linked_to_edition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#linked_to_edition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#LinkingText"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Edition"/>
+        <rdfs:comment>The linkage between a piece of text of a comment and an edition</rdfs:comment>
+        <rdfs:label>linked to edition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#linked_to_paragraph -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#linked_to_paragraph">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#LinkingText"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Paragraph"/>
+        <rdfs:comment>The linkage between a piece of text of a comment and a paragraph</rdfs:comment>
+        <rdfs:label>linked to paragraph</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#meaningConceivedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#meaningConceivedBy">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#creator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Meaning"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#User"/>
+        <rdfs:comment>The user that conceived or provided a particular meaning of a tag</rdfs:comment>
+        <rdfs:label>meaning conceived by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#operaConceiver -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#operaConceiver">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/vocab/frbr/core#creator"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Author"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Opera"/>
+        <rdfs:comment>The Opera conceived by an author</rdfs:comment>
+        <rdfs:label>opera conceiver</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#relies_on_Auth_Statement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#relies_on_Auth_Statement">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#AuthorAssignment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Statement"/>
+        <rdfs:comment>The statement that asserts something relative to an author</rdfs:comment>
+        <rdfs:label>relies on author statement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#relies_on_Ed_Statement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#relies_on_Ed_Statement">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P15_was_influenced_by"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#EditionAssignment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Statement"/>
+        <rdfs:comment>The statement that asserts something relative to  the assignment of an edition to an opera</rdfs:comment>
+        <rdfs:label>relies on edition statement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#starting_Paragraph -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#starting_Paragraph">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#CommentingEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Paragraph"/>
+        <rdfs:comment>The first in a sequence of paragraphs to which a comment refers</rdfs:comment>
+        <rdfs:label>starting paragraph</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#statedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#statedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Statement"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+        <rdfs:comment>The connection between a statement and the actor(user, group or an external source) that stated it</rdfs:comment>
+        <rdfs:label>stated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#tag_Meaning -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#tag_Meaning">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#RestrictedTagging"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#MeaningReference"/>
+        <rdfs:comment>The connection between a particular usage of a tag and the meaning associated to it in that restricted context</rdfs:comment>
+        <rdfs:label>tag meaning</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#toComment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#toComment">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P17_was_motivated_by"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#CommentingEvent"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Comment"/>
+        <rdfs:comment>The comment belonging to a commentingEvent</rdfs:comment>
+        <rdfs:label>to comment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#writtenFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#writtenFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P129_is_about"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Message"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#DiscussionRoom"/>
+        <rdfs:comment>The connection by a message sent by an user and the discussion room to which the message points</rdfs:comment>
+        <rdfs:label>written for</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#wroteMessage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#wroteMessage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Message"/>
+        <rdfs:comment>The connection between a message and the user that wrote it</rdfs:comment>
+        <rdfs:label>wrote message</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#OldCommentTagMeaning -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#OldCommentTagMeaning">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#OldComment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#authorName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#authorName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Author"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#belongingGroup -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#belongingGroup">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#bookTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#bookTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Book"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#chapterTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#chapterTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#ChapterListItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#commentStyle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#commentStyle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Comment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#commentText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#commentText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Comment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#commentingEventDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#commentingEventDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#CommentingEvent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#editImportance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#editImportance">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#HistoryLogListItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#editionJudgementParameter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#editionJudgementParameter">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#EditionAssignment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#editionPlace -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#editionPlace">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Edition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#editionTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#editionTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Edition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#edtionDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#edtionDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Edition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#finalMoment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#finalMoment">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#historyInsertionDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#historyInsertionDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#HistoryLogListItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#initialMoment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#initialMoment">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#isbn -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#isbn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Edition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#judjementParameter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#judjementParameter">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Reliability"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#location">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#meaningText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#meaningText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Meaning"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#messageText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#messageText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Message"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#messageTimeStamp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#messageTimeStamp">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Message"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#oldCommentAuthor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#oldCommentAuthor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#OldComment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#oldCommentTag -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#oldCommentTag">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#OldComment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#oldText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#oldText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#OldComment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#operaDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#operaDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Opera"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#operaTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#operaTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Opera"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#parName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#parName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Paragraph"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#parNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#parNumber">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Paragraph"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#parText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#parText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Paragraph"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#publisher -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#publisher">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Edition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#referenceDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#referenceDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#MeaningReference"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#referencingText -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#referencingText">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#LinkingText"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#roleName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#roleName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Role"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#roomCreationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#roomCreationDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#DiscussionRoom"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#series -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#series">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Edition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#specificTag -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#specificTag">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Tag"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#statementCreationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#statementCreationDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Statement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#statementString -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#statementString">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Statement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#userInfo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#userInfo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#userName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#userName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#userRegistrationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#userRegistrationDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#userSurname -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#userSurname">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/co/List -->
+
+    <owl:Class rdf:about="http://purl.org/co/List">
+        <rdfs:comment>An ordered array of items, that can be present in multiple copies</rdfs:comment>
+        <rdfs:label>List</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/co/ListItem -->
+
+    <owl:Class rdf:about="http://purl.org/co/ListItem">
+        <rdfs:comment>An element belonging to a list</rdfs:comment>
+        <rdfs:label>List Item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#Expression -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/frbr/core#Expression">
+        <rdfs:comment>The intellectual or artistic realization of a work in the form of alpha-numeric, musical, or choreographic notation, sound, image, object, movement, etc., or any combination of such forms. An expression is the specific intellectual or artistic form that a work takes each time it is &quot;realized.&quot; Expression encompasses, for example, the specific words, sentences, paragraphs, etc. that result from the realization of a work in the form of a text, or the particular sounds, phrasing, etc. resulting from the realization of a musical work.</rdfs:comment>
+        <rdfs:label>Expression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#Item -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/frbr/core#Item">
+        <rdfs:comment>A single data or a set of data considered as a unit</rdfs:comment>
+        <rdfs:label>Item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#Manifestation -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/frbr/core#Manifestation">
+        <rdfs:comment>The physical embodiment of an expression of a work. The entity defined as manifestation encompasses a wide range of materials and formats. As an entity, manifestation represents all the physical objects that bear the same characteristics, in respect to both intellectual content and physical form</rdfs:comment>
+        <rdfs:label>Manifestation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vocab/frbr/core#Work -->
+
+    <owl:Class rdf:about="http://purl.org/vocab/frbr/core#Work">
+        <rdfs:comment>A distinct intellectual or artistic creation. A work is an abstract entity; there is no single material object one can point to as the work. We recognize the work through individual realizations or expressions of the work, but the work itself exists only in the commonality of content between and among the various expressions of the work. When we speak of Homer&apos;s Iliad as a work, our point of reference is not a particular recitation or text of the work, but the intellectual creation that lies behind all the various expressions of the work</rdfs:comment>
+        <rdfs:label>Work</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment">
+        <rdfs:comment>This class comprises the actions of making assertions about one property of an object or any single relation between two items or concepts.</rdfs:comment>
+        <rdfs:label>Attribute Assignment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment">
+        <rdfs:comment>This class comprises the actions of classifying items of whatever kind. Such items include objects, specimens, people, actions and concepts.</rdfs:comment>
+        <rdfs:label>Type Assignment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E20_Biological_Object -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E20_Biological_Object">
+        <rdfs:comment>This class comprises individual items of a material nature, which live, have lived or are natural products of or from living organisms.</rdfs:comment>
+        <rdfs:label>Biological Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object">
+        <rdfs:comment>This class comprises identifiable expressions in natural language or languages.</rdfs:comment>
+        <rdfs:label>Linguistic Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E39_Actor -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E39_Actor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#belongingGroup"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This class comprises people, either individually or in groups, who have the potential to perform intentional actions of kinds for which someone may be held responsible.</rdfs:comment>
+        <rdfs:label>Actor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#finalMoment"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#initialMoment"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This class comprises abstract temporal extents, in the sense of Galilean physics, having a beginning, an end and a duration. Instances of E52 Time-Span have no semantic connotations about phenomena happening within the temporal extent they represent. They do not convey any meaning other than a positioning on the “time-line” of chronology. The actual extent of an instance of E52 Time-Span can be approximated by properties of E52 Time-Span giving inner and outer bounds in the form of dates. Comparing knowledge about time-spans is fundamental for chronological reasoning.</rdfs:comment>
+        <rdfs:label>Time Span</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E53_Place -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E53_Place">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#location"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This class comprises extents in the natural space we live in, in particular on the surface of the Earth, in the pure sense of physics: independent from temporal phenomena and matter. They may serve describing the physical location of things or phenomena or other areas of interest. Geometrically, instances of E53 Place constitute single contiguous areas or a finite aggregation of disjoint areas in space which are each individually contiguous. They may have fuzzy boundaries. __entity belonging to the Author Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Place</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E55_Type -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E55_Type">
+        <rdfs:comment>This class comprises concepts denoted by terms from thesauri and controlled vocabularies used to characterize and classify instances of MPPCO classes.</rdfs:comment>
+        <rdfs:label>Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E67_Birth -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E67_Birth">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P98_brought_into_life"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Author"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#bornInPlace"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#bornInTime"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#hasReliability_B"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Reliability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This class comprises the births of human beings. E67 Birth is a biological event focussing on the context of people coming into life. __entity belonging to the Author Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Birth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E69_Death -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E69_Death">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P100_was_death_of"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Author"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#diedInPlace"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#diedInTime"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#has_Reliability_D"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Reliability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This class comprises the deaths of human beings. __entity belonging to the Author Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Death</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object">
+        <rdfs:comment>This class comprises identifiable immaterial items, such as poems, jokes, data sets, images, texts, multimedia objects, procedural prescriptions, computer program code, algorithm or mathematical formulae, that have an objectively recognizable structure and are documented as single units.</rdfs:comment>
+        <rdfs:label>Information Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E7_Activity -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E7_Activity">
+        <rdfs:comment>This class comprises actions intentionally carried out by instances of E39 Actor that result in changes of state in the cultural, social, or physical systems documented.</rdfs:comment>
+        <rdfs:label>Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object">
+        <rdfs:comment>This class comprises immaterial items, including but not limited to stories, plots, procedural prescriptions, algorithms, laws of physics or images that are, or represent in some sense, sets of propositions about real or imaginary things and that are documented as single units or serve as topic of discourse.</rdfs:comment>
+        <rdfs:label>Propositional Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Author -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Author">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E20_Biological_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#authorName"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An Author of some writings, recorded with his generic individual informations. __entity belonging to the Author Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Author</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#AuthorAssignment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#AuthorAssignment">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#assignedAuthor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#assignedAuthor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E67_Birth"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#assignedAuthor"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E69_Death"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This class comprises the actions of making assertions about some properties of an author like (his beginning and/or ending of his existence and/or the site in which this events took place. __entity belonging to thte Author Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Author Assignment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Book -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Book">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Manifestation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#exemplar"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#ChapterList"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#bookTitle"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A set of pages that have been fastened together inside a cover to be read or written in. __entity belonging to the Opera Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Book</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#ChapterList -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#ChapterList">
+        <rdfs:subClassOf rdf:resource="http://purl.org/co/List"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Item"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/co/firstItem"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#ChapterListItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An ordered list of chapters belonging to a particular book. __entity belonging to the Opera Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Chapter List</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#ChapterListItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#ChapterListItem">
+        <rdfs:subClassOf rdf:resource="http://purl.org/co/ListItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/co/nextItem"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#ChapterListItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#chapterTitle"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Entity belonging to the Opera Sub-Ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Comment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Comment">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#commentStyle"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#commentText"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An observatoin made by an user on one paragraph or on a sequence of paragraph. __entity belonging to the Comment Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Comment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#CommentingEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#CommentingEvent">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E7_Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#classifiedByTag"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#RestrictedTagging"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#hasAgent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#User"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#starting_Paragraph"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Paragraph"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#toComment"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Comment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#ending_Paragraph"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Paragraph"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#history_log"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#HistoryLogList"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#commentingEventDate"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This class sums up the action of commenting a particular resource(a paragraph or a sequence of paragraphs)carried on by an agent of a platform (User). An instance of Commenting Event can be eventually classified by an instance of Restricted Tagging that tries to categorize the text of the comment. __entity belonging to the Comment Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Commenting Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#DiscussionRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#DiscussionRoom">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#discussesOn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Comment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#roomCreationDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A room used to discuss on a comment wrote on a particular paragraph or on a sequence of paragraphs. __entity belonging to the Tag Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Discussion Room</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Edition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Edition">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Expression"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#embodiment"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Book"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#editionPlace"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#editionTitle"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#edtionDate"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#isbn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#publisher"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#series"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A particular form or version of a published opera. __entity belonging to the Opera Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Edition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#EditionAssignment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#EditionAssignment">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#assignedEdition"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Edition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#editionJudgementParameter"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This class comprises the actions of making assertions about the assignment of an Edition to an Opera. __entity Belonging to the Opera Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Edition Assignment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#HistoryLogList -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#HistoryLogList">
+        <rdfs:subClassOf rdf:resource="http://purl.org/co/List"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/co/firstItem"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#HistoryLogListItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The list of changes made to a particular comment. __entity belonging to the Comment Sub-Ontology__</rdfs:comment>
+        <rdfs:label>History Log List</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#HistoryLogListItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#HistoryLogListItem">
+        <rdfs:subClassOf rdf:resource="http://purl.org/co/ListItem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/co/nextItem"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#HistoryLogListItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#editImportance"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#historyInsertionDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Entity belonging to the Comment Sub-Ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#LinkingText -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#LinkingText">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#linkedToComment"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Comment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#linked_to_book"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Book"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#linked_to_chapter"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#ChapterListItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#linked_to_edition"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Edition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#linked_to_paragraph"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Paragraph"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#referencingText"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This class comprises the text of a comment that can refer to the same or different paragraph, chapter, book, edition in the context of the comment. It can also refer to another comment. __entity belonging to the Comment Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Linking Text</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Meaning -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Meaning">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#meaningConceivedBy"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#User"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#meaningText"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This class comprises elements intended to communicate something that is not directly expressed during the usage of a tag in a platform. __entity belonging to the Tag Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Meaning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#MeaningReference -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#MeaningReference">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#referenceDescription"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A source of information that contains the definition of a meaning. __entity belonging to the Tag Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Meaning Reference</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Message -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Message">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#messageText"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#messageTimeStamp"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A message sent in a particular moment by an user on a particular Discussion Room. __entity belonging to the Tag Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Message</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#OldComment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#OldComment">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#oldCommentAuthor"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#oldText"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#OldCommentTagMeaning"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#oldCommentTag"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A comment which has been updated (which also comprises a tag referring to the importance of the edit) by an user and is no longer considered relevant for a generic user of a platform, but relevant for the user involved in the Discussion Room which revolves around it. (Example of usage: It can be visualized in a section of the discussion room to visualize the hystory log of the comment). __entity belonging to the Comment Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Old Comment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Opera -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Opera">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vocab/frbr/core#Work"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/vocab/frbr/core#realization"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Edition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#operaDate"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#operaTitle"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Entity belonging to the Opera Sub-Ontology</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Paragraph -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Paragraph">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#in_chapter"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#ChapterListItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#parName"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#parNumber"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#parText"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A distinct section of a piece of writing, usually dealing with a single theme and indicated by a new line, indentation, or numbering. __entity belonging to the Opera Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Paragraph</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Reliability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Reliability">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#judjementParameter"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An indicator of confidence or reliance that can be assigned to an information submitted into the system (in our particular case this indicator can refer to the events of birth and death of an author). __entity belonging to the Author Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Reliability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#RestrictedTagging -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#RestrictedTagging">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E17_Type_Assignment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#associated_Tag"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Tag"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The eventual classification of a comment with a particular tag with a particular meaning(which can be inherited by the tag itself or further specified by the agent of the tag). __entity belonging to the Tag Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Restricted Tagging</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Role">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#roleName"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The part played by an user of a platform. __entity belonging to the Tag Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Statement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Statement">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#statedBy"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#statementCreationDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#statementString"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>The assertion made by an actor(internal or external to a particular platform)on an item which is considered element of open discussion because there is a lack of assured informations. __entity belonging to the Author Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Tag -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Tag">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#has_Meaning"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Meaning"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#specificTag"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A descriptive word or phrase applied to a comment as a label or means of identification; epithet. __entity belonging to the Tag Sub-Ontology__</rdfs:comment>
+        <rdfs:label>Tag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#User">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E39_Actor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#hasRole"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#userInfo"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#userName"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#userRegistrationDate"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/francescomonzillo/ontologies/2023/6/MPPCOnto#userSurname"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A particular individual who can perform different actions depending on the role he plays in a platform. __entity belonging to the Comment Sub-Ontology__</rdfs:comment>
+        <rdfs:label>User</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
