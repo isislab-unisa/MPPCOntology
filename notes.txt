@@ -1,0 +1,25 @@
+In this file we will introduce some variations or observations on the schema that has been introduced
+in this repository (You can find some screenshots in the "useful materials" folder).
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. It is still unknown if implemementing each linking text (as plain text) of a comment as an instance of the class "Linking Text"
+    is better than simply relating each comment to a sequence of instances of linking text that neatly represents every 
+    linking text (plain text) of the original comment. So we recommend to the potential users that wants to implement this schema
+    to test both solutions in their platform (if they are interested to the performance).
+
+2. The class "Time Primitive" is purely intended as a symbolic interface between the scope of this schema and the world of 
+    mathematical and computational manipulations and the symbolic objects they define and handle.
+    Therefore, the instances of "Time Primitive" must not be represented in an implementation by a universal identifier associated
+    with a content model of different identity. In a concrete application, it is recommended that the primitive value system from
+    a chosen implementation platform and/or data definition language be used to substitute for this class.
+
+3. Depending on the purpose of an application, the instances of the class "old comment" can be linked to each connection of the
+    instances of the class "comment" if the eventual platform is interested on keeping all relations of an old comment to the other
+    elements of the schema.
+
+4. The instances of the class "Paragraph" can also be implemented as a list of paragraphs representing those utilised by a concrete
+    application if it turns out to be more intuitive or effective in the operations interested on their retrieval. The class has been showed
+    in this clean form just to emphasize its central part it plays in the schema.
